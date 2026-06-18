@@ -1,0 +1,675 @@
+/* general styles  */
+body {
+  font-family: "Chakra Petch", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Days One", sans-serif;
+}
+:root {
+  --primary-color: #cbfe1c;
+  --secondary-color: #1e2939;
+  --color-gray: #d1d5db;
+  --dark: #0b0e13;
+  --light: #f1f1f1;
+  --gray-800: #2a2a2a;
+  --gray-700: #3a3a3a;
+  --gray-600: #4a4a4a;
+  --gray-400: #99a1af;
+  --gray-300: #d1d5db;
+}
+.color-primary {
+  color: var(--primary-color) !important;
+}
+.hover\:color-primary:hover {
+  color: var(--primary-color);
+}
+.color-secondary {
+  color: var(--secondary-color) !important;
+}
+.color-gray {
+  color: var(--color-gray) !important;
+}
+.color-dark {
+  color: var(--dark) !important;
+}
+.color-gray-400 {
+  color: var(--gray-400) !important;
+}
+.color-gray-300 {
+  color: var(--gray-300) !important;
+}
+.color-light {
+  color: var(--light) !important;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: calc(2.5 / 2.25);
+}
+.h-64 {
+  height: calc(var(--spacing) * 64);
+}
+.bg-gray-800 {
+  background-color: #1e2939 !important;
+}
+.bg-primary-custom {
+  background-color: var(--primary-color);
+}
+@media (min-width: 40rem) {
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .sm\:h-80 {
+    height: calc(0.25rem * 80);
+  }
+}
+@media (min-width: 64rem) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+.rounded-2xl {
+  border-radius: 1rem;
+}
+@media (min-width: 48rem) {
+  .md\:h-96 {
+    height: calc(0.25rem * 96);
+  }
+  .py-md-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+.lh-relaxed {
+  line-height: 1.625;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.btn-outline-primary-custom {
+  color: var(--primary-color);
+}
+.btn-outline-primary-custom:hover {
+  color: var(--dark);
+  background-color: var(--primary-color);
+}
+.border-gray-700 {
+  --bs-border-color: #364153;
+}
+.border-gray-800 {
+  --bs-border-color: #1e2939;
+}
+.border-primary-custom {
+  border-color: var(--primary-color) !important;
+}
+.icon {
+  width: 4rem;
+  height: 4rem;
+}
+.icon2 {
+  width: 3rem;
+  height: 3rem;
+}
+.hover\:bg-primary\/80:hover {
+  background-color: #cbfe1ccc;
+}
+/* end of general styling */
+/* navbar */
+header {
+  background-color: var(--dark);
+  z-index: 1000;
+}
+.navbar-brand {
+  color: var(--primary-color);
+}
+.navbar-toggler-icon {
+  color: var(--light);
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+/* Navbar button tweaks */
+.btn-signin {
+  min-width: 6rem;
+}
+
+/* end of navbar */
+/* hero section */
+#home {
+  background-image:
+    linear-gradient(#000000e0, #000000e0), url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.btn-bd-primary {
+  --bs-btn-font-weight: 700;
+  --bs-btn-bg: var(--primary-color);
+  transition: all 0.15s;
+}
+.btn-bd-secondary {
+  --bs-btn-font-weight: 700;
+  --bs-btn-color: var(--primary-color);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color: var(--secondary-color);
+  --bs-btn-hover-bg: var(--primary-color);
+  transition: all 0.15s;
+}
+.btn-bd-primary:hover {
+  background-color: color-mix(in oklab, var(--primary-color) 80%, transparent);
+}
+.btn-shine::before {
+  content: "";
+  background: linear-gradient(90deg, #0000, #fff6, #0000);
+  width: 100%;
+  height: 100%;
+  transition: left 0.6s;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine:hover:before {
+  left: 100%;
+}
+.img-bg {
+  background-image: linear-gradient(to right in oklab, #cbfe1c, #06df72);
+}
+.hero-stats {
+  background: var(--dark);
+  border: 1px solid var(--gray-800);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+}
+@media (max-width: 576px) {
+  .hero-stats {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1rem;
+  }
+}
+/* our games section */
+.bg-dark-custom {
+  background-color: var(--dark) !important;
+}
+.section-label {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.section-label::before,
+.section-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color));
+}
+.section-label::before {
+  right: calc(100% + 20px);
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, transparent, var(--primary-color));
+}
+.section-label::after {
+  left: calc(100% + 20px);
+  transform: translateY(-50%);
+  background: linear-gradient(270deg, transparent, var(--primary-color));
+}
+@media (max-width: 576px) {
+  .section-label::before,
+  .section-label::after {
+    width: 20px;
+  }
+  .section-label::before {
+    right: calc(100% + 10px);
+  }
+  .section-label::after {
+    left: calc(100% + 10px);
+  }
+}
+.section-title {
+  font-size: 3rem;
+}
+.game-card {
+  aspect-ratio: 4/3;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.game-card:hover img {
+  transform: scale(1.08);
+}
+.game-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(203, 254, 28, 0.8),
+    rgba(203, 254, 28, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.game-card:hover .overlay {
+  opacity: 1;
+}
+.game-card .tags {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  transition: top 0.3s;
+  flex-wrap: wrap;
+}
+.game-card:hover .tags {
+  top: 1rem;
+}
+.game-card .tags span {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  color: var(--light);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.game-card .tags span i {
+  color: var(--primary-color);
+}
+.game-card .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 1.1rem;
+}
+.game-card:hover .title {
+  transform: translateY(0);
+}
+.game-card .border-glow {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 1.2rem;
+  transition: border-color 0.3s;
+  pointer-events: none;
+}
+.game-card:hover .border-glow {
+  border-color: var(--primary-color);
+}
+
+.games-carousel-wrapper {
+  overflow: hidden;
+}
+.games-carousel-wrapper .carousel-inner {
+  /* Use Bootstrap carousel behavior; leave spacing for slides */
+  position: relative;
+}
+.games-carousel-wrapper .carousel-inner .carousel-item {
+  padding: 0 0.75rem;
+}
+/* If you want multi-card visible per slide later, implement a custom carousel script */
+.arrow-btn {
+  width: 52px;
+  height: 52px;
+}
+/* end of our games section */
+/* wwd */
+.wwd-card {
+  background: #1a1a1a;
+  border-radius: 1.2rem;
+  padding: 1.5rem 1rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--gray-800);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.wwd-card:hover {
+  border-color: var(--primary-color);
+}
+.wwd-card .corner {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.3s;
+}
+.wwd-card .corner-tl {
+  top: -24px;
+  left: -24px;
+  border-top: 24px solid #4a4a4a;
+  border-right: 24px solid transparent;
+}
+.wwd-card:hover .corner-tl {
+  top: 16px;
+  left: 16px;
+  border-top-color: var(--primary-color);
+}
+.wwd-card .corner-br {
+  bottom: -24px;
+  right: -24px;
+  border-bottom: 24px solid #4a4a4a;
+  border-left: 24px solid transparent;
+}
+.wwd-card:hover .corner-br {
+  bottom: 16px;
+  right: 16px;
+  border-bottom-color: var(--primary-color);
+}
+.wwd-icon {
+  width: 64px;
+  height: 64px;
+  background: #2a2a2a;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  transition: all 0.3s;
+  margin-bottom: 1rem;
+}
+.wwd-card:hover .wwd-icon {
+  background: var(--primary-color);
+  color: var(--dark);
+}
+.wwd-card h5 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.wwd-img {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+.wwd-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .wwd-card {
+    aspect-ratio: auto;
+    padding: 1.5rem 1rem;
+    min-height: 160px;
+  }
+  .wwd-img {
+    aspect-ratio: auto;
+    min-height: 160px;
+  }
+}
+/* end of wwd */
+/* slideshow */
+#sponsors {
+  background-image: radial-gradient(
+    ellipse in oklab,
+    color-mix(in oklab, var(--primary-color) 85%, transparent) 0%,
+    transparent 70%
+  );
+  background-color: var(--dark);
+}
+.sponsor-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  /* ensure the track (logos) sits above the glow but below the fades */
+  position: relative;
+  z-index: 1;
+  animation: scroll-left 25s linear infinite;
+}
+.sponsor-track-right {
+  animation: scroll-right 25s linear infinite;
+}
+.sponsor-item {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+.sponsor-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.sponsor-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+}
+.sponsor-fade-left {
+  left: 0;
+  background: linear-gradient(to right in oklab, #101828 0%, transparent 100%);
+}
+.sponsor-fade-right {
+  right: 0;
+  background: linear-gradient(to left in oklab, #101828 0%, transparent 100%);
+}
+.sponsor-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(203, 254, 28, 0.6) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .sponsor-item {
+    width: 72px;
+    height: 72px;
+  }
+  .sponsor-fade {
+    width: 40px;
+  }
+  .sponsor-glow {
+    width: 400px;
+    height: 200px;
+  }
+}
+/* slideshow */
+/* our teams */
+#team-members {
+  padding-block: 6rem;
+}
+#team-members .row {
+  /* Use Bootstrap gutters instead of a fixed gap to avoid overflowing columns
+     which can force 4x `col-lg-3` items to wrap to 3 per row. */
+  --bs-gutter-x: 2rem; /* horizontal gutter between cols */
+  --bs-gutter-y: 2rem; /* vertical gutter between rows */
+  margin-right: calc(-1 * var(--bs-gutter-x));
+  margin-left: calc(-1 * var(--bs-gutter-x));
+  padding-inline: 1.5rem;
+}
+.h-20rem {
+  height: 20rem;
+}
+.team-member-card .h-20rem::before {
+  content: "";
+  background: inherit;
+  backdrop-filter: grayscale() brightness(0.9);
+  z-index: 1;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+}
+.team-member-card:hover .h-20rem::before {
+  transform: translateY(-100%);
+}
+.team-member-card img {
+  border-radius: 1rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+}
+.rotate-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+/* our teams */
+/* contact us section */
+#contact {
+  padding-block: 6rem;
+  background-image: linear-gradient(
+    to bottom right in oklab,
+    #101828 0%,
+    #0b0e13 100%
+  );
+}
+#contact .info {
+  --bs-gutter-x: rem; /* horizontal gutter between cols */
+  --bs-gutter-y: 2rem; /* vertical gutter between rows */
+  margin-right: calc(-1 * var(--bs-gutter-x));
+  margin-left: calc(-1 * var(--bs-gutter-x));
+  margin-top: 0;
+}
+#contact > .col-12 {
+  margin-top: 0;
+}
+.info .col-12:first-child {
+  margin-top: 0;
+}
+.info .col-12 {
+  border-radius: 1rem;
+}
+.community {
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    to right in oklab,
+    var(--primary-color) 0%,
+    #06df72 100%
+  );
+}
+input,
+select,
+textarea {
+  color: #f1f1f1;
+  background-color: #364153;
+  border: 1px solid #4a5565;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  resize: none;
+}
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #364153;
+  border: 1px solid #4a5565;
+  border-radius: 0.25rem;
+  margin-inline-end: 0.75rem;
+}
+.focus\:border-transparent:focus {
+  border-color: #0000;
+}
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 2px #0000;
+}
+.focus\:outline-none:focus {
+  outline-style: none;
+}
+.focus\:ring-primary:focus {
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+form button {
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  transition: all 0.15s;
+}
+/* end of contact us section */
+/* footer */
+#footer {
+}
+#footer .row {
+  --bs-gutter-x: 2rem; /* horizontal gutter between cols */
+  --bs-gutter-y: 2rem; /* vertical gutter between rows */
+  margin-right: calc(-1 * var(--bs-gutter-x));
+  margin-left: calc(-1 * var(--bs-gutter-x));
+}
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
