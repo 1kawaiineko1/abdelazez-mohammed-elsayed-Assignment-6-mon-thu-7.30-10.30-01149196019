@@ -102,9 +102,6 @@ h6 {
 .border-gray-700 {
   --bs-border-color: #364153;
 }
-.border-gray-800 {
-  --bs-border-color: #1e2939;
-}
 .border-primary-custom {
   border-color: var(--primary-color) !important;
 }
@@ -342,13 +339,13 @@ header {
   overflow: hidden;
 }
 .games-carousel-wrapper .carousel-inner {
-  /* Use Bootstrap carousel behavior; leave spacing for slides */
+ 
   position: relative;
 }
 .games-carousel-wrapper .carousel-inner .carousel-item {
   padding: 0 0.75rem;
 }
-/* If you want multi-card visible per slide later, implement a custom carousel script */
+
 .arrow-btn {
   width: 52px;
   height: 52px;
@@ -458,7 +455,7 @@ header {
   display: flex;
   gap: 1rem;
   width: max-content;
-  /* ensure the track (logos) sits above the glow but below the fades */
+
   position: relative;
   z-index: 1;
   animation: scroll-left 25s linear infinite;
@@ -546,10 +543,9 @@ header {
   padding-block: 6rem;
 }
 #team-members .row {
-  /* Use Bootstrap gutters instead of a fixed gap to avoid overflowing columns
-     which can force 4x `col-lg-3` items to wrap to 3 per row. */
-  --bs-gutter-x: 2rem; /* horizontal gutter between cols */
-  --bs-gutter-y: 2rem; /* vertical gutter between rows */
+
+  --bs-gutter-x: 2rem; 
+  --bs-gutter-y: 2rem; 
   margin-right: calc(-1 * var(--bs-gutter-x));
   margin-left: calc(-1 * var(--bs-gutter-x));
   padding-inline: 1.5rem;
@@ -594,8 +590,8 @@ header {
   );
 }
 #contact .info {
-  --bs-gutter-x: rem; /* horizontal gutter between cols */
-  --bs-gutter-y: 2rem; /* vertical gutter between rows */
+  --bs-gutter-x: rem; 
+  --bs-gutter-y: 2rem; 
   margin-right: calc(-1 * var(--bs-gutter-x));
   margin-left: calc(-1 * var(--bs-gutter-x));
   margin-top: 0;
@@ -657,8 +653,8 @@ form button {
 #footer {
 }
 #footer .row {
-  --bs-gutter-x: 2rem; /* horizontal gutter between cols */
-  --bs-gutter-y: 2rem; /* vertical gutter between rows */
+  --bs-gutter-x: 2rem; 
+  --bs-gutter-y: 2rem; 
   margin-right: calc(-1 * var(--bs-gutter-x));
   margin-left: calc(-1 * var(--bs-gutter-x));
 }
